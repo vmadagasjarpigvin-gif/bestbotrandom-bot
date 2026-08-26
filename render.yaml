@@ -1,0 +1,32 @@
+services:
+  - type: worker
+    name: bestbotrandom-bot
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m app.main
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_IDS
+        value: "1816081573,8134306958"
+      - key: ADMIN_USERNAMES
+        value: "sexmakson"
+      - key: ADMIN_PASSCODE
+        sync: false
+      - key: REQUIRED_CHANNEL
+        value: "@irisha_starsik"
+      - key: REQUIRED_CHANNEL_URL
+        value: "https://t.me/irisha_starsik"
+      - key: PRIZE_CONTACT
+        value: "@liana_nft"
+      - key: BOT_USERNAME
+        value: "bestbotrandom_bot"
+      - key: BROADCAST_DELAY
+        value: "0.05"
+      - key: DB_PATH
+        value: "/var/data/bot.sqlite3"
+    disk:
+      name: bot-data
+      mountPath: /var/data
+      sizeGB: 1

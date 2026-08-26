@@ -1,0 +1,6 @@
+.env
+*.sqlite3
+participants.csv
+__pycache__/
+*.pyc
+.venv/

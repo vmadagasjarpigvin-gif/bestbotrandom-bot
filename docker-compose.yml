@@ -1,0 +1,15 @@
+services:
+  giveaway-bot:
+    build: .
+    container_name: giveaway-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./bot.sqlite3:/app/bot.sqlite3
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
