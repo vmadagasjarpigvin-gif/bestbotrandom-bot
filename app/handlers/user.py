@@ -63,8 +63,8 @@ async def check_sub(callback: CallbackQuery, bot: Bot):
                 referral_count=str(current.get("referral_count", 0)),
             ),
         )
-        if auto_win_enabled() and not auto_win_was_sent(callback.from_user.id):
-            asyncio.create_task(delayed_auto_win(bot, callback.from_user.id))
+        # Авто-отправка сообщения «Поздравляем! Подведены итоги конкурса!» отключена.
+        # Победные сообщения теперь отправляются только вручную из админки/рассылки.
     else:
         await callback.message.answer(format_template("not_subscribed_text"))
     await callback.answer()

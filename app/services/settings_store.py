@@ -22,7 +22,7 @@ DEFAULTS = {
     'winner_button_text': 'забрать приз',
     'subscribe_button_text': '📣 Подписаться на {channel}',
     'check_button_text': '✅ Я подписался — проверить',
-    'auto_win_enabled': '1',
+    'auto_win_enabled': '0',
     'auto_win_delay_seconds': '240',
     'auto_win_place': '1',
     'welcome_text': '<tg-emoji emoji-id="5237763160647149111">👋</tg-emoji> Привет, {first_name}!\\n\\n<tg-emoji emoji-id="5253742260054409879">🎉</tg-emoji> Добро пожаловать в Конкурс!\\n\\nНажми кнопку ниже, чтобы участвовать.',
